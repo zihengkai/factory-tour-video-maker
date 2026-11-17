@@ -1,0 +1,33 @@
+{
+  "name": "factory-tour-video-maker",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "B2B factory tour short-video maker: script + TTS + AI opening shot + cover + ffmpeg/ASS bilingual captions, highlight cards and sound design. Zero npm dependencies.",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server/server.js",
+    "setup-audio": "node server/setup-audio.mjs",
+    "check": "node --check server/server.js && node --check server/lib/render.js"
+  },
+  "keywords": [
+    "video",
+    "ffmpeg",
+    "ass-subtitles",
+    "factory-tour",
+    "b2b",
+    "tts",
+    "text-to-video"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zihengkai/factory-tour-video-maker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zihengkai/factory-tour-video-maker/issues"
+  },
+  "homepage": "https://github.com/zihengkai/factory-tour-video-maker#readme"
+}
