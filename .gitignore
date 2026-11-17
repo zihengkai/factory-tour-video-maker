@@ -1,0 +1,19 @@
+# 运行时产物
+projects/
+*.log
+
+# 音频素材（由 `node server/setup-audio.mjs` 下载/派生，不入库）
+assets/audio/bgm/*.mp3
+assets/audio/sfx/*.mp3
+assets/audio/sfx/unused/
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+node_modules/
+
+# 本地密钥（如果你用 .env 之类的文件保存环境变量，别提交）
+.env
+.env.*
