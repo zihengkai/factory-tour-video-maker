@@ -70,22 +70,22 @@ node server/server.js           # 打开 http://127.0.0.1:8731
 PowerShell 示例：
 
 ```powershell
-$env:LLM_BASE="https://api.openai.com/v1"
-$env:LLM_API_KEY="sk-..."
-$env:LLM_MODEL="gpt-4o-mini"
+$env:LLM_BASE="https://your-llm-api.example.com/v1"
+$env:LLM_API_KEY="your-llm-key"
+$env:LLM_MODEL="your-llm-model"
 
-$env:IMAGE_BASE="https://api.openai.com/v1"
-$env:IMAGE_API_KEY="sk-..."
-$env:IMAGE_MODEL="gpt-image-1"
+$env:IMAGE_BASE="https://your-image-api.example.com/v1"
+$env:IMAGE_API_KEY="your-image-key"
+$env:IMAGE_MODEL="your-image-model"
 
 $env:VIDEO_BASE="https://your-video-api.example.com/v1"
-$env:VIDEO_API_KEY="..."
+$env:VIDEO_API_KEY="your-video-key"
 $env:VIDEO_MODEL="your-video-model-id"
 
 $env:TTS_ENDPOINT="https://your-tts-api.example.com/v1/tts"
-$env:TTS_API_KEY="..."
+$env:TTS_API_KEY="your-tts-key"
 $env:TTS_MODEL="your-tts-model"
-$env:TTS_SPEAKER="en_female_voice"    # 可选
+$env:TTS_SPEAKER="your-voice-id"    # 可选
 
 node server/server.js
 ```
@@ -125,11 +125,10 @@ factory-tour-video-maker/
 │       ├── store.js             # 项目目录 / project.json 状态真源
 │       ├── llm.js               # 卖点提炼 + 口播稿（OpenAI 兼容）
 │       ├── tts.js               # 整段配音 + 词数分摊时间轴
-│       ├── image.js             # 封面：参考图编辑（multiline）+ 文生图兜底
+│       ├── image.js             # 封面：参考图编辑（multipart 多图）+ 文生图兜底
 │       ├── video.js             # 开场镜头：异步建任务 + 轮询 + 下载
 │       ├── render.js            # 归一化 → xfade → 混音 → ASS 烧字幕 → final.mp4
-│       ├── media.js             # ffmpeg/ffprobe 定位与封装
-│       └── dom-lite.js           # 零依赖 HTML 解析（备用，当前流程不调用）
+│       └── media.js             # ffmpeg/ffprobe 定位与封装
 ├── public/                      # 无构建静态前端
 │   ├── index.html  css/styles.css  js/app.js
 ├── assets/audio/
